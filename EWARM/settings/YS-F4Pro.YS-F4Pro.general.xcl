@@ -1,0 +1,15 @@
+"E:\IAR软件\arm\bin\armproc.dll" 
+
+"E:\IAR软件\arm\bin\armstlink2.dll" 
+
+"C:\Users\yingshi7\Desktop\YSF4_HAL-008. USART1-同步异步串行通信\EWARM\YS-F4Pro\Exe\YS-F4Pro.out" 
+
+--plugin "E:\IAR软件\arm\bin\armbat.dll" 
+
+--device_macro "E:\IAR软件\arm\config\debugger\ST\STM32F4xx.dmac" 
+
+--flash_loader "E:\IAR软件\arm\config\flashloader\ST\FlashSTM32F4xxx.board" 
+
+
+
+
