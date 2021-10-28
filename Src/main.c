@@ -108,8 +108,8 @@ int main(void)
   MX_USARTx_Init();
 //	KEY_GPIO_Init();
 //  /* 配置定时器输出脉冲 */
-//  STEPMOTOR_TIMx_Init();
-	 usmart_dev.init(168); 
+  STEPMOTOR_TIMx_Init();
+	 usmart_dev.init(84); 
   printf("通信测试！\r\n");
 //  memcpy(txbuf,"这是一个串口中断接收回显实验\n",50);
 //  HAL_UART_Transmit(&husartx,txbuf,strlen((char *)txbuf),1000);
@@ -125,7 +125,7 @@ int main(void)
   {
 				HAL_Delay(1000);
 //		 HAL_UART_Transmit(&huart1, (uint8_t *)ZZX,3, 0xffff);
-	printf("printf可以使用\r\n");
+//	printf("printf可以使用\r\n");
 //    if(KEY1_StateRead() == KEY_DOWN)
 //		{
 //      STEPMOTOR_DisMoveRel(-100,step_accel,step_decel,set_speed);//向前移动100mm

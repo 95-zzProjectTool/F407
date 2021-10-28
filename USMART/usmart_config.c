@@ -2,9 +2,14 @@
 #include "usmart_str.h"
 ////////////////////////////用户配置区///////////////////////////////////////////////
 //这下面要包含所用到的函数所申明的头文件(用户自己添加) 
-//#include "delay.h"	 	
+#include "delay.h"	 	
 #include "sys.h"
 //#include "lcd.h"
+#include "StepMotor/bsp_STEPMOTOR.h"
+
+//      STEPMOTOR_DisMoveRel(-100,step_accel,step_decel,set_speed);//向前移动100mm
+extern void STEPMOTOR_DisMoveRel(__IO int16_t distance, __IO uint32_t accel, __IO uint32_t decel, __IO uint32_t speed);
+
 								 
 //extern void led_set(u8 sta);
 //extern void test_fun(void(*ledset)(u8),u8 sta);										  
@@ -16,8 +21,8 @@ struct _m_usmart_nametab usmart_nametab[]=
 	(void*)read_addr,"u32 read_addr(u32 addr)",
 	(void*)write_addr,"void write_addr(u32 addr,u32 val)",	 
 #endif		   
-//	(void*)delay_ms,"void delay_ms(u16 nms)",
-// 	(void*)delay_us,"void delay_us(u32 nus)",	 
+	(void*)delay_ms,"void delay_ms(u16 nms)",
+ 	(void*)delay_us,"void delay_us(u32 nus)",	 
 //	(void*)LCD_Clear,"void LCD_Clear(u16 Color)",
 //	(void*)LCD_Fill,"void LCD_Fill(u16 xsta,u16 ysta,u16 xend,u16 yend,u16 color)",
 //	(void*)LCD_DrawLine,"void LCD_DrawLine(u16 x1, u16 y1, u16 x2, u16 y2)",
@@ -32,6 +37,8 @@ struct _m_usmart_nametab usmart_nametab[]=
 //		
 //	(void*)led_set,"void led_set(u8 sta)",
 //	(void*)test_fun,"void test_fun(void(*ledset)(u8),u8 sta)",						
+	
+	  (void*)STEPMOTOR_DisMoveRel,"void STEPMOTOR_DisMoveRel(__IO int16_t distance, __IO uint32_t accel, __IO uint32_t decel, __IO uint32_t speed)",
 };						  
 ///////////////////////////////////END///////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////

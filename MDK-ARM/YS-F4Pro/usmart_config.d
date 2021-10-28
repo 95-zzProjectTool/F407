@@ -80,3 +80,5 @@ ys-f4pro\usmart_config.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_fmpi
 ys-f4pro\usmart_config.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spdifrx.h
 ys-f4pro\usmart_config.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dfsdm.h
 ys-f4pro\usmart_config.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_lptim.h
+ys-f4pro\usmart_config.o: ..\SYSTEM\delay\delay.h
+ys-f4pro\usmart_config.o: ..\Inc\bsp\StepMotor/bsp_STEPMOTOR.h
