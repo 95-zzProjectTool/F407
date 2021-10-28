@@ -8,9 +8,30 @@
 #include "StepMotor/bsp_STEPMOTOR.h"
 
 //      STEPMOTOR_DisMoveRel(-100,step_accel,step_decel,set_speed);//向前移动100mm
-extern void STEPMOTOR_DisMoveRel(__IO int16_t distance, __IO uint32_t accel, __IO uint32_t decel, __IO uint32_t speed);
+#define  FASTSEEK_SPEED   300		//原点回归速度
+#define  SLOWSEEK_SPEED   100		//原点回归爬行速度
+/* 私有宏定义 ----------------------------------------------------------------*/
+/* 私有变量 ------------------------------------------------------------------*/
+// 速度最大值由驱动器和电机决定，有些最大是1800，有些可以达到4000
+//uint32_t set_speed  = 500;         // 速度 单位为0.05rad/sec
+//// 加速度和减速度选取一般根据实际需要，值越大速度变化越快，加减速阶段比较抖动
+//// 所以加速度和减速度值一般是在实际应用中多尝试出来的结果
+//uint32_t step_accel = 150;         // 加速度 单位为0.025rad/sec^2
+//uint32_t step_decel = 50;         // 减速度 单位为0.025rad/sec^2
+extern void STEPMOTOR_DisMoveAbs(__IO uint16_t Target_Dis, __IO uint32_t accel, __IO uint32_t decel, __IO uint32_t speed);
 
-								 
+extern void STEPMOTOR_DisMoveRel(__IO int16_t distance, __IO uint32_t accel, __IO uint32_t decel, __IO uint32_t speed);
+extern uint8_t search_flag ;
+
+void beginsearch(int8_t dir)								 
+{
+	HomeDir = dir;
+	search_flag = 1;
+//	while(HomeCapture == FALSE)
+//	{
+//		STEPMOTOR_AxisHome(FASTSEEK_SPEED,SLOWSEEK_SPEED,150,50);	//搜索原点
+//	}
+}
 //extern void led_set(u8 sta);
 //extern void test_fun(void(*ledset)(u8),u8 sta);										  
 //函数名列表初始化(用户自己添加)
@@ -39,6 +60,9 @@ struct _m_usmart_nametab usmart_nametab[]=
 //	(void*)test_fun,"void test_fun(void(*ledset)(u8),u8 sta)",						
 	
 	  (void*)STEPMOTOR_DisMoveRel,"void STEPMOTOR_DisMoveRel(__IO int16_t distance, __IO uint32_t accel, __IO uint32_t decel, __IO uint32_t speed)",
+		(void*)beginsearch,"beginsearch(int8_t dir)",	
+		(void*)STEPMOTOR_DisMoveAbs," STEPMOTOR_DisMoveAbs(__IO uint16_t Target_Dis, __IO uint32_t accel, __IO uint32_t decel, __IO uint32_t speed)",
+
 };						  
 ///////////////////////////////////END///////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////

@@ -342,15 +342,33 @@ void STEPMOTOR_DisMoveRel(__IO int16_t distance, __IO uint32_t accel, __IO uint3
   *           并移动到目标位置,
   *             
   */
+//void STEPMOTOR_DisMoveAbs(__IO uint16_t Target_Dis, __IO uint32_t accel, __IO uint32_t decel, __IO uint32_t speed)
+//{
+//  __IO int16_t step; 
+//    
+//  if(Target_Dis > MAX_DISTANCE)
+//    return;
+//  else if(Target_Dis < UNITS_DISTANCE)
+//    return;
+//  step = Target_Dis - location;     //获得当前位置与目标位置的距离
+//  STEPMOTOR_DisMoveRel(step,accel,decel,speed);
+//}
 void STEPMOTOR_DisMoveAbs(__IO uint16_t Target_Dis, __IO uint32_t accel, __IO uint32_t decel, __IO uint32_t speed)
 {
   __IO int16_t step; 
     
-  if(Target_Dis > MAX_DISTANCE)
+	if(Target_Dis < UNITS_DISTANCE)
     return;
-  else if(Target_Dis < UNITS_DISTANCE)
-    return;
-  step = Target_Dis - location;     //获得当前位置与目标位置的距离
+	else if(Target_Dis > 10000) //说明是负数
+	{
+		Target_Dis = 0xffffffff- Target_Dis;
+		step = (Target_Dis+location)*(-1);
+	}
+	else
+	{
+		 step = Target_Dis - location;     //获得当前位置与目标位置的距离
+	}
+ 
   STEPMOTOR_DisMoveRel(step,accel,decel,speed);
 }
 /** 
@@ -454,15 +472,15 @@ void STEPMOTOR_AxisHome(__IO int32_t fastseek_speed, __IO uint32_t slowseek_spee
 			if((DOG == FALSE)&&( HomeCapture == FALSE))	
       {
         //特殊状况3:在反转极限位置起步,同特殊状况2
-          if( HAL_GPIO_ReadPin( LIMNEG_PORT,LIMNEG_PIN ) ==LIM_NEG_LEVEL)
-          {
-            SC_Flag = 1;
-            HomeDir = CW;     //设置搜索原点方向
-          }
-          else
-          {
-            HomeDir = CCW;
-          }       		
+//          if( HAL_GPIO_ReadPin( LIMNEG_PORT,LIMNEG_PIN ) ==LIM_NEG_LEVEL)
+//          {
+//            SC_Flag = 1;
+//            HomeDir = CW;     //设置搜索原点方向
+//          }
+//          else
+//          {
+//            HomeDir = CCW;
+//          }       		
 					SET_BIT(EXTI->IMR, (uint16_t)ORIGIN_PIN);
 					HAL_NVIC_SetPriority(ORIGIN_EXTI_IRQn, 1, 0);
 					HAL_NVIC_EnableIRQ(ORIGIN_EXTI_IRQn);					

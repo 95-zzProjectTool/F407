@@ -1,7 +1,7 @@
 Dependencies for Project 'YS-F4Pro', Target 'YS-F4Pro': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (startup_stm32f407xx.s)(0x6179FFB4)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-IC:\Users\gao\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 533" --pd "STM32F407xx SETA 1"--list startup_stm32f407xx.lst --xref -o ys-f4pro\startup_stm32f407xx.o --depend ys-f4pro\startup_stm32f407xx.d)
-F (../Src/main.c)(0x617A0204)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Inc\bsp -I ..\Inc\bsp\key -I ..\Inc\bsp\StepMotor -I ..\USMART -I ..\SYSTEM\sys -I ..\SYSTEM\delay --C99-IC:\Users\gao\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ys-f4pro\main.o --omf_browse ys-f4pro\main.crf --depend ys-f4pro\main.d)
+F (../Src/main.c)(0x617A5197)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Inc\bsp -I ..\Inc\bsp\key -I ..\Inc\bsp\StepMotor -I ..\USMART -I ..\SYSTEM\sys -I ..\SYSTEM\delay --C99-IC:\Users\gao\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ys-f4pro\main.o --omf_browse ys-f4pro\main.crf --depend ys-f4pro\main.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6179FFB3)
 I (../Inc/stm32f4xx_hal_conf.h)(0x6179FFB4)
 I (../Inc/main.h)(0x6179FFB4)
@@ -81,7 +81,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dfsdm.h)(0x6179FFB3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_lptim.h)(0x6179FFB3)
 I (..\Inc\bsp\usart/bsp_usartx.h)(0x6179FFB4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E2EB2)
-I (..\Inc\bsp\StepMotor/bsp_STEPMOTOR.h)(0x6179FFB4)
+I (..\Inc\bsp\StepMotor/bsp_STEPMOTOR.h)(0x617A4388)
 I (..\Inc\bsp\key/bsp_key.h)(0x6179FFB4)
 I (..\USMART\usmart.h)(0x6179FFB4)
 I (..\USMART\usmart_str.h)(0x6179FFB4)
@@ -166,7 +166,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_fmpi2c.h)(0x6179FFB3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spdifrx.h)(0x6179FFB3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dfsdm.h)(0x6179FFB3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_lptim.h)(0x6179FFB3)
-F (../Src/stm32f4xx_it.c)(0x6179FFB4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Inc\bsp -I ..\Inc\bsp\key -I ..\Inc\bsp\StepMotor -I ..\USMART -I ..\SYSTEM\sys -I ..\SYSTEM\delay --C99-IC:\Users\gao\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ys-f4pro\stm32f4xx_it.o --omf_browse ys-f4pro\stm32f4xx_it.crf --depend ys-f4pro\stm32f4xx_it.d)
+F (../Src/stm32f4xx_it.c)(0x617A4B9B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Inc\bsp -I ..\Inc\bsp\key -I ..\Inc\bsp\StepMotor -I ..\USMART -I ..\SYSTEM\sys -I ..\SYSTEM\delay --C99-IC:\Users\gao\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ys-f4pro\stm32f4xx_it.o --omf_browse ys-f4pro\stm32f4xx_it.crf --depend ys-f4pro\stm32f4xx_it.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6179FFB3)
 I (../Inc/stm32f4xx_hal_conf.h)(0x6179FFB4)
 I (../Inc/main.h)(0x6179FFB4)
@@ -248,6 +248,7 @@ I (../Inc/stm32f4xx_it.h)(0x6179FFB4)
 I (..\Inc\bsp\usart/bsp_usartx.h)(0x6179FFB4)
 I (..\SYSTEM\sys\sys.h)(0x6179FFB4)
 I (..\SYSTEM\sys\stm32f4xx.h)(0x6179FFB4)
+I (..\Inc\bsp\StepMotor/bsp_STEPMOTOR.h)(0x617A4388)
 F (..\Src\stm32f4xx_assert.c)(0x6179FFB4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Inc\bsp -I ..\Inc\bsp\key -I ..\Inc\bsp\StepMotor -I ..\USMART -I ..\SYSTEM\sys -I ..\SYSTEM\delay --C99-IC:\Users\gao\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ys-f4pro\stm32f4xx_assert.o --omf_browse ys-f4pro\stm32f4xx_assert.crf --depend ys-f4pro\stm32f4xx_assert.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6179FFB3)
 I (../Inc/stm32f4xx_hal_conf.h)(0x6179FFB4)
@@ -3370,8 +3371,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_fmpi2c.h)(0x6179FFB3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spdifrx.h)(0x6179FFB3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dfsdm.h)(0x6179FFB3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_lptim.h)(0x6179FFB3)
-F (..\Src\bsp\StepMotor\bsp_STEPMOTOR.c)(0x6179FFB4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Inc\bsp -I ..\Inc\bsp\key -I ..\Inc\bsp\StepMotor -I ..\USMART -I ..\SYSTEM\sys -I ..\SYSTEM\delay --C99-IC:\Users\gao\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ys-f4pro\bsp_stepmotor.o --omf_browse ys-f4pro\bsp_stepmotor.crf --depend ys-f4pro\bsp_stepmotor.d)
-I (..\Inc\bsp\StepMotor/bsp_STEPMOTOR.h)(0x6179FFB4)
+F (..\Src\bsp\StepMotor\bsp_STEPMOTOR.c)(0x617A5197)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Inc\bsp -I ..\Inc\bsp\key -I ..\Inc\bsp\StepMotor -I ..\USMART -I ..\SYSTEM\sys -I ..\SYSTEM\delay --C99-IC:\Users\gao\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ys-f4pro\bsp_stepmotor.o --omf_browse ys-f4pro\bsp_stepmotor.crf --depend ys-f4pro\bsp_stepmotor.d)
+I (..\Inc\bsp\StepMotor/bsp_STEPMOTOR.h)(0x617A4388)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6179FFB3)
 I (../Inc/stm32f4xx_hal_conf.h)(0x6179FFB4)
 I (../Inc/main.h)(0x6179FFB4)
@@ -3451,7 +3452,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dfsdm.h)(0x6179FFB3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_lptim.h)(0x6179FFB3)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
 F (..\Readme\01.开发环境说明.txt)(0x6179FFB4)()
-F (..\USMART\usmart.c)(0x6179FFB4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Inc\bsp -I ..\Inc\bsp\key -I ..\Inc\bsp\StepMotor -I ..\USMART -I ..\SYSTEM\sys -I ..\SYSTEM\delay --C99-IC:\Users\gao\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ys-f4pro\usmart.o --omf_browse ys-f4pro\usmart.crf --depend ys-f4pro\usmart.d)
+F (..\USMART\usmart.c)(0x617A4F39)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Inc\bsp -I ..\Inc\bsp\key -I ..\Inc\bsp\StepMotor -I ..\USMART -I ..\SYSTEM\sys -I ..\SYSTEM\delay --C99-IC:\Users\gao\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ys-f4pro\usmart.o --omf_browse ys-f4pro\usmart.crf --depend ys-f4pro\usmart.d)
 I (..\USMART\usmart.h)(0x6179FFB4)
 I (..\USMART\usmart_str.h)(0x6179FFB4)
 I (..\SYSTEM\sys\sys.h)(0x6179FFB4)
@@ -3534,7 +3535,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spdifrx.h)(0x6179FFB3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dfsdm.h)(0x6179FFB3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_lptim.h)(0x6179FFB3)
 I (..\Inc\bsp\usart/bsp_usartx.h)(0x6179FFB4)
-F (..\USMART\usmart_config.c)(0x617A009A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Inc\bsp -I ..\Inc\bsp\key -I ..\Inc\bsp\StepMotor -I ..\USMART -I ..\SYSTEM\sys -I ..\SYSTEM\delay --C99-IC:\Users\gao\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ys-f4pro\usmart_config.o --omf_browse ys-f4pro\usmart_config.crf --depend ys-f4pro\usmart_config.d)
+F (..\USMART\usmart_config.c)(0x617A4D1C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Inc\bsp -I ..\Inc\bsp\key -I ..\Inc\bsp\StepMotor -I ..\USMART -I ..\SYSTEM\sys -I ..\SYSTEM\delay --C99-IC:\Users\gao\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ys-f4pro\usmart_config.o --omf_browse ys-f4pro\usmart_config.crf --depend ys-f4pro\usmart_config.d)
 I (..\USMART\usmart.h)(0x6179FFB4)
 I (..\USMART\usmart_str.h)(0x6179FFB4)
 I (..\SYSTEM\sys\sys.h)(0x6179FFB4)
@@ -3617,7 +3618,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spdifrx.h)(0x6179FFB3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dfsdm.h)(0x6179FFB3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_lptim.h)(0x6179FFB3)
 I (..\SYSTEM\delay\delay.h)(0x6179FFB4)
-I (..\Inc\bsp\StepMotor/bsp_STEPMOTOR.h)(0x6179FFB4)
+I (..\Inc\bsp\StepMotor/bsp_STEPMOTOR.h)(0x617A4388)
 F (..\USMART\usmart_str.c)(0x6179FFB4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Inc\bsp -I ..\Inc\bsp\key -I ..\Inc\bsp\StepMotor -I ..\USMART -I ..\SYSTEM\sys -I ..\SYSTEM\delay --C99-IC:\Users\gao\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ys-f4pro\usmart_str.o --omf_browse ys-f4pro\usmart_str.crf --depend ys-f4pro\usmart_str.d)
 I (..\USMART\usmart_str.h)(0x6179FFB4)
 I (..\SYSTEM\sys\sys.h)(0x6179FFB4)

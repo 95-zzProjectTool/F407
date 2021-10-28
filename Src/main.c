@@ -37,7 +37,7 @@ uint32_t set_speed  = 500;         // 速度 单位为0.05rad/sec
 uint32_t step_accel = 150;         // 加速度 单位为0.025rad/sec^2
 uint32_t step_decel = 50;         // 减速度 单位为0.025rad/sec^2
 //uint8_t aRxBuffer;
-
+uint8_t search_flag = 0;
 /* 扩展变量 ------------------------------------------------------------------*/
 /* 私有函数原形 --------------------------------------------------------------*/
 /* 函数体 --------------------------------------------------------------------*/
@@ -106,24 +106,40 @@ int main(void)
 
   /* 初始化串口并配置串口中断优先级 */
   MX_USARTx_Init();
-//	KEY_GPIO_Init();
+	KEY_GPIO_Init();
 //  /* 配置定时器输出脉冲 */
   STEPMOTOR_TIMx_Init();
 	 usmart_dev.init(84); 
-  printf("通信测试！\r\n");
+  printf("tof校准平台\r\n");
 //  memcpy(txbuf,"这是一个串口中断接收回显实验\n",50);
 //  HAL_UART_Transmit(&husartx,txbuf,strlen((char *)txbuf),1000);
-//  
-//  memcpy(txbuf,"输入数据并以回车键结束\n",50);
-//  HAL_UART_Transmit(&husartx,txbuf,strlen((char *)txbuf),1000);
-//  
-  /* 使能接收，进入中断回调函数 */
-  //HAL_UART_Receive_IT(&husartx,&aRxBuffer,1);
-  
+
   /* 无限循环 */
   while (1)
   {
-				HAL_Delay(1000);
+		if(search_flag == 1)
+		{
+			STEPMOTOR_AxisHome(FASTSEEK_SPEED,SLOWSEEK_SPEED,150,50);	//搜索原点
+			
+		}
+
+		if(KEY1_StateRead() == KEY_DOWN)
+		{
+      STEPMOTOR_DisMoveRel(100,step_accel,step_decel,set_speed);//向前移动100mm
+		}
+    if(KEY2_StateRead() == KEY_DOWN)
+		{
+      STEPMOTOR_DisMoveRel(-100,step_accel,step_decel,set_speed);//向后移动100mm
+		}
+    if(KEY3_StateRead() == KEY_DOWN)
+		{
+      STEPMOTOR_DisMoveAbs(150,step_accel,step_decel,set_speed);//定位在150mm的位置
+		}
+    if(KEY4_StateRead() == KEY_DOWN)
+    {
+      STEPMOTOR_DisMoveAbs(100,step_accel,step_decel,set_speed);//定位移动100mm
+    }
+    
 //		 HAL_UART_Transmit(&huart1, (uint8_t *)ZZX,3, 0xffff);
 //	printf("printf可以使用\r\n");
 //    if(KEY1_StateRead() == KEY_DOWN)
@@ -137,11 +153,3 @@ int main(void)
   }
 }
 
-/**
-  * 函数功能: 串口接收完成回调函数
-  * 输入参数: 无
-  * 返 回 值: 无
-  * 说    明：无
-  */
-
-/******************* (C) COPYRIGHT 2015-2020 硬石嵌入式开发团队 *****END OF FILE****/

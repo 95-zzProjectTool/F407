@@ -280,6 +280,7 @@ u8 usmart_cmd_rec(u8*str)
 	u8 rpnum,spnum;
 	u8 rfname[MAX_FNAME_LEN];//暂存空间,用于存放接收到的函数名  
 	u8 sfname[MAX_FNAME_LEN];//存放本地函数名
+	
 	sta=usmart_get_fname(str,rfname,&rpnum,&rval);//得到接收到的数据的函数名及参数个数	  
 	if(sta)return sta;//错误
 	for(i=0;i<usmart_dev.fnum;i++)

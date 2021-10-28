@@ -119,6 +119,9 @@ typedef struct {
 /* 扩展变量 ------------------------------------------------------------------*/
 extern TIM_HandleTypeDef htimx_STEPMOTOR;
 /* 函数声明 ------------------------------------------------------------------*/
+extern __IO int8_t   HomeDir;			  // 电机回原点方向
+extern __IO uint8_t  HomeCapture ;		  // 原点捕获标志
+
 
 void STEPMOTOR_TIMx_Init(void);
 void STEPMOTOR_AxisMoveRel(int32_t step, uint32_t accel, uint32_t decel, uint32_t speed);

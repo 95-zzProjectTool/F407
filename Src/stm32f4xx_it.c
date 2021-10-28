@@ -39,7 +39,7 @@
 #include "sys.h"
 //#include "usart_vangao.h"
 /* USER CODE BEGIN 0 */
-
+#include "StepMotor/bsp_STEPMOTOR.h"
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -179,6 +179,38 @@ void SysTick_Handler(void)
 
   /* USER CODE END SysTick_IRQn 1 */
 }
+
+
+/**
+* @brief This function handles EXTI line[9:5] interrupt.
+*/
+//void LIMNEG_EXTI_IRQHandler(void)
+//{
+//  /* USER CODE BEGIN EXTI0_IRQn 0 */
+
+//  /* USER CODE END EXTI0_IRQn 0 */
+//	
+//  HAL_GPIO_EXTI_IRQHandler(LIMNEG_PIN);
+//  /* USER CODE BEGIN EXTI0_IRQn 1 */
+
+//  /* USER CODE END EXTI0_IRQn 1 */
+//}
+//void LIMPOS_EXTI_IRQHandler()
+//{
+//  /* USER CODE BEGIN EXTI0_IRQn 0 */
+
+//  /* USER CODE END EXTI0_IRQn 0 */
+//  HAL_GPIO_EXTI_IRQHandler(LIMPOS_PIN);
+//  /* USER CODE BEGIN EXTI0_IRQn 1 */
+
+//  /* USER CODE END EXTI0_IRQn 1 */
+//  
+//}
+void ORIGIN_EXTI_IRQHandler(void)
+{
+	HAL_GPIO_EXTI_IRQHandler(ORIGIN_PIN);
+}
+
 
 /******************************************************************************/
 /* STM32F4xx Peripheral Interrupt Handlers                                    */

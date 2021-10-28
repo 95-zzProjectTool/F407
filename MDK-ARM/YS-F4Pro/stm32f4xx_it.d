@@ -81,3 +81,4 @@ ys-f4pro\stm32f4xx_it.o: ../Inc/stm32f4xx_it.h
 ys-f4pro\stm32f4xx_it.o: ..\Inc\bsp\usart/bsp_usartx.h
 ys-f4pro\stm32f4xx_it.o: ..\SYSTEM\sys\sys.h
 ys-f4pro\stm32f4xx_it.o: ..\SYSTEM\sys\stm32f4xx.h
+ys-f4pro\stm32f4xx_it.o: ..\Inc\bsp\StepMotor/bsp_STEPMOTOR.h
